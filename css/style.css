@@ -1,0 +1,20 @@
+.container{
+    text-align: center;
+    margin: 30px auto;
+    max-width: 600px;
+}
+
+#timer{
+    font-size: 36px;
+    border:1px solid gray;
+    padding: 50px;
+    background-color: black;
+    color: darkgoldenrod;
+    font-family: 'Stick No Bills', sans-serif;
+
+}
+
+.btn{
+    width: 50%;
+    margin-top:20px;
+}
