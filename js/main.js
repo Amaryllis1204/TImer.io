@@ -26,8 +26,6 @@ document.getElementById('reset').addEventListener('click', function(){
 document.getElementById('timer').innerHTML = '00:00:00';
 });
 
-
-
 //時計の数字の先頭に0をつける関数
 let addZero = function(value){
 if(value < 10){
