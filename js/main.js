@@ -15,7 +15,7 @@ if(this.innerHTML === 'START'){
 }else{
     clearInterval(timer_id);
 
-    //STRATボタンにする
+    //STARTボタンにする
     this.innerHTML = 'START';
     this.classList.remove('btn-danger');
     this.classList.add('btn-primary');
