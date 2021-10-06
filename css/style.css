@@ -4,6 +4,11 @@
     max-width: 600px;
 }
 
+#date{
+    font-size: 24px;
+    border:1px solid gray;
+}
+
 #timer{
     font-size: 36px;
     border:1px solid gray;
