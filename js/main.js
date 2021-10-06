@@ -26,6 +26,7 @@ if(this.innerHTML === 'START'){
 
 document.getElementById('reset').addEventListener('click', function(){
 document.getElementById('timer').innerHTML = '00:00:00';
+stop = 0;
 });
 
 //時計の数字の先頭に0をつける関数
