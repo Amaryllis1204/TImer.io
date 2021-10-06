@@ -3,6 +3,25 @@ let start;
 let timer_id;
 let stop = 0;
 
+function showClock(){
+    let now = new Date();
+
+    //時
+    let hours = now.getHours();
+    hours = addZero(hours);
+    //分
+    let minutes = now.getMinutes();
+    minutes = addZero(minutes);
+    //秒
+    let seconds = now.getSeconds();
+    seconds = addZero(seconds);
+
+    let nowHtml = (hours + ':' + minutes + ':' + seconds);
+    document.getElementById('date').innerHTML = nowHtml;
+}
+
+setInterval('showClock()', 1000);
+
 //ボタン操作
 document.getElementById('start_stop').addEventListener('click', function(){
 if(this.innerHTML === 'START'){
