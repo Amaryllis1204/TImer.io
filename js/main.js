@@ -26,6 +26,8 @@ if(this.innerHTML === 'START'){
 
 document.getElementById('reset').addEventListener('click', function(){
 document.getElementById('timer').innerHTML = '00:00:00';
+
+//内部で保持している時間をリセット
 stop = 0;
 });
 
@@ -54,5 +56,6 @@ hours = addZero(hours);
 
 document.getElementById('timer').innerHTML = hours + ':' + minutes + ':' + seconds;
 
+//再開した時ようにstopボタンを押すまでの時間を返す
 return milli;
 }
