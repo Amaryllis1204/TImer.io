@@ -61,8 +61,9 @@ return value;
 //タイマー処理の関数
 let goTimer = function(value){
 let now = new Date();
-let milli = now.getTime() - start.getTime() + stop;
-let seconds = Math.floor(milli / 1000);
+let time = now.getTime() - start.getTime() + stop;
+let milliSec = time % 1000;
+let seconds = Math.floor(time / 1000);
 let minutes = Math.floor(seconds / 60);
 let hours = Math.floor(minutes / 60);
 
@@ -72,11 +73,14 @@ minutes = minutes - hours * 60;
 seconds = addZero(seconds);
 minutes = addZero(minutes);
 hours = addZero(hours);
+milliSec = String(milliSec).slice(0, 2);
+milliSec = addZero(milliSec)
 
-document.getElementById('timer').innerHTML = hours + ':' + minutes + ':' + seconds;
+
+document.getElementById('timer').innerHTML = hours + ':' + minutes + ':' + seconds + ':' + milliSec;
 
 //再開した時ようにstopボタンを押すまでの時間を返す
-return milli;
+return time;
 }
 
 function today(){
