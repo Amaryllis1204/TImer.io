@@ -78,3 +78,13 @@ document.getElementById('timer').innerHTML = hours + ':' + minutes + ':' + secon
 //再開した時ようにstopボタンを押すまでの時間を返す
 return milli;
 }
+
+function today(){
+    let today = new Date();
+    let dayOfWeek = today.getDay();
+    let dayOfWeekStr = ['日', '月', '火', '水', '木', '金', '土'][dayOfWeek];
+    let todayHtml = today.getFullYear() + '/' + today.getMonth() + '/' + today.getDate() + '(' + dayOfWeekStr + ')';
+    document.getElementById('today').innerHTML = todayHtml;
+}
+
+setInterval('today()', 1000);
