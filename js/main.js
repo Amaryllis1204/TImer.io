@@ -76,7 +76,6 @@ hours = addZero(hours);
 milliSec = String(milliSec).slice(0, 2);
 milliSec = addZero(milliSec)
 
-
 document.getElementById('timer').innerHTML = hours + ':' + minutes + ':' + seconds + ':' + milliSec;
 
 //再開した時ようにstopボタンを押すまでの時間を返す
