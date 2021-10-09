@@ -22,7 +22,7 @@ function showClock(){
 
 setInterval('showClock()', 1000);
 
-//ボタン操作
+//start_stopボタン操作
 document.getElementById('start_stop').addEventListener('click', function(){
 if(this.innerHTML === 'START'){
     start = new Date();
@@ -32,6 +32,9 @@ if(this.innerHTML === 'START'){
     this.innerHTML = 'STOP';
     this.classList.remove('btn-primary');
     this.classList.add('btn-danger');
+
+    //LAPボタンにする
+    document.getElementById('reset_lap').innerHTML = 'LAP';
 }else{
     stop = goTimer();
     clearInterval(timer_id);
@@ -40,10 +43,21 @@ if(this.innerHTML === 'START'){
     this.innerHTML = 'START';
     this.classList.remove('btn-danger');
     this.classList.add('btn-primary');
+
+    //RESETボタンにする
+    document.getElementById('reset_lap').innerHTML = 'RESET';
 }
 });
 
-document.getElementById('reset').addEventListener('click', function(){
+//reset_lapボタン操作
+document.getElementById('reset_lap').addEventListener('click', function(){
+    if(this.innerHTML === 'LAP'){
+        document.getElementById('lapTIme').innerHTML = document.getElementById('timer');
+    }
+});
+
+//リセットボタン
+document.getElementById('reset_lap').addEventListener('click', function(){
 document.getElementById('timer').innerHTML = '00:00:00';
 
 //内部で保持している時間をリセット
