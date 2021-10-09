@@ -52,13 +52,18 @@ if(this.innerHTML === 'START'){
 //reset_lapボタン操作
 document.getElementById('reset_lap').addEventListener('click', function(){
     if(this.innerHTML === 'LAP'){
-        document.getElementById('lapTIme').innerHTML = document.getElementById('timer');
+        let textbox_element = document.getElementById('lapTime');
+        let element = document.getElementById('timer').textContent;
+        let new_element = document.createElement('p');
+        new_element.innerHTML = element;
+        document.getElementById('lapTime').appendChild(new_element);
+        console.log(element);
     }
 });
 
 //リセットボタン
 document.getElementById('reset_lap').addEventListener('click', function(){
-document.getElementById('timer').innerHTML = '00:00:00';
+document.getElementById('timer').innerHTML = '00:00:00:00';
 
 //内部で保持している時間をリセット
 stop = 0;
