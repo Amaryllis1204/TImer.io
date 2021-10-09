@@ -58,6 +58,9 @@ document.getElementById('reset_lap').addEventListener('click', function(){
         new_element.innerHTML = element;
         document.getElementById('lapTime').appendChild(new_element);
         console.log(element);
+    }else{
+        document.getElementById('timer').innerHTML = '00:00:00:00';
+        document.getElementById('lapTime').innerHTML = '';
     }
 });
 
