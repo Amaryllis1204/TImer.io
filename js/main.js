@@ -60,11 +60,8 @@ document.getElementById('reset_lap').addEventListener('click', function(){
     }else{
         document.getElementById('timer').innerHTML = '00:00:00:00';
         document.getElementById('lapTime').innerHTML = '';
+        stop = 0;
     }
-});
-
-//内部で保持している時間をリセット
-stop = 0;
 });
 
 //時計の数字の先頭に0をつける関数
