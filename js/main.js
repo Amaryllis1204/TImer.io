@@ -63,10 +63,6 @@ document.getElementById('reset_lap').addEventListener('click', function(){
     }
 });
 
-//リセットボタン
-document.getElementById('reset_lap').addEventListener('click', function(){
-document.getElementById('timer').innerHTML = '00:00:00:00';
-
 //内部で保持している時間をリセット
 stop = 0;
 });
