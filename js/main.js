@@ -100,7 +100,7 @@ function today(){
     let today = new Date();
     let dayOfWeek = today.getDay();
     let dayOfWeekStr = ['日', '月', '火', '水', '木', '金', '土'][dayOfWeek];
-    let todayHtml = today.getFullYear() + '/' + today.getMonth() + '/' + today.getDate() + '(' + dayOfWeekStr + ')';
+    let todayHtml = today.getFullYear() + '/' + (today.getMonth() + 1)+ '/' + today.getDate() + '(' + dayOfWeekStr + ')';
     document.getElementById('today').innerHTML = todayHtml;
 }
 
