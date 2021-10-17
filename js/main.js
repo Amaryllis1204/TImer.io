@@ -20,8 +20,6 @@ function showClock(){
     document.getElementById('date').innerHTML = nowHtml;
 }
 
-setInterval('showClock()', 1000);
-
 //start_stopボタン操作
 document.getElementById('start_stop').addEventListener('click', function(){
 if(this.innerHTML === 'START'){
@@ -104,4 +102,5 @@ function today(){
     document.getElementById('today').innerHTML = todayHtml;
 }
 
+setInterval('showClock()', 1000);
 setInterval('today()', 1000);
