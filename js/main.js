@@ -1,4 +1,3 @@
-
 let start;
 let timer_id;
 let stop = 0;
